@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+body {
+  font-family: 'Museo Sans Rounded';
+  color: #4f5560;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.material-icons:hover {
+  color: #f7bf16;
+  cursor: pointer; 
+}
+
+.main {
+  background: url(../img/Layer\ 5.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.main__card {
+  position: relative;
+  display: flex;
+  background-color: #111a28;
+  max-width: 690px;
+  width: 100%;
+  min-height: 390px;
+  border-radius: 15px;
+}
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+.main__shoes {
+  padding: 30px;
+}
+.main__shoes--color {
+  display: block;
+  margin-top: 30%;
+  margin-bottom: 40px;
+}
+
+.main__shoes--input {
+  position: relative;
+  visibility: hidden;
+  cursor: pointer;
+  margin: 6px;
+}
+.main__shoes--input::before {
+  visibility: visible;
+  content: '';
+  position: absolute; 
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50%; 
+  cursor: pointer;
+}
+.main__shoes--input:hover::before,
+.main__shoes--input:checked::before {
+  box-shadow: 0 0 0 2px gray;
+}
+.main__shoes--input::before {
+  transition: box-shadow .1s ease-in;
+}
+
+.main__form {
+  flex-direction: column;
+  align-items: start;
+  max-width: 190px;
+  cursor: default;
+  margin-left: 50px;
+}
+.main__form-title {
+  margin-bottom: 15px;
+  color: #e1e1e1;
+  opacity: .6;
+}
+.main__form-subtitle {
+  margin-bottom: 20px;
+}
+
+.dark::before {
+  background-color: #1f273f;
+}
+.red::before {
+  background-color: #ed3333;
+}
+.blue::before {
+  background-color: #29e3ea;
+}
+
+.main__form-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.btn,
+.main__form-select {
+  background-color: #111a28;
+  border: 2px solid #4f5560;
+  color: #4f5560;
+  cursor: pointer;
+}
+
+.main__form-select {
+  padding: 8px;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.btn {
+  font-size: 16px;
+  max-width: 190px;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.btn:hover,
+.main__form-select:hover {
+  background-color: #202835;
+  transition: background-color .1s ease-in;
+}
+.btn:active,
+.main__form-select:active {
+  background-color: #212938;
+}
+
+
+/* raiting */
+
+.rating {
+	overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 20px;
+
+}
+.rating:not(:checked) > input {
+	display: none;
+}
+.rating:not(:checked) > label {	
+	padding: 0;
+	cursor: pointer;
+	font-size: 24px;
+	line-height: 24px;
+	color: lightgrey;
+}
+.rating:not(:checked) > label:before {
+	content: '★';
+}
+.rating > input:checked ~ label {
+  color: #f7bf16;
+}
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #f7bf16;
+  transition: color .2s ease-in;
+}
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+	color: #f7bf16;
+}
+.rate-area > label:active {
+	position: relative;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- star-icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./fonts/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+  <main class="main flex-center">
+    <div class="main__card">
+      <img src="./img/logo.png" alt="Nike" class="logo">
+      <div class="main__shoes ">
+        <img class="main__shoes--color" src="./img/Nike-SB-Stefan-Janoski-Max.png" alt="Nike-SB-Stefan-Janoski-Max">
+        <div class="main__wrapper flex-center">
+          <input class="main__shoes--input dark" checked type="radio" name="color" id="">
+          <input class="main__shoes--input" type="radio" name="color" id="">
+          <input class="main__shoes--input red" type="radio" name="color" id="">
+          <input class="main__shoes--input blue" type="radio" name="color" id="">
+        </div>
+      </div>
+
+      <form class="main__form flex-center">
+        <h2 class="main__form-title">Nike SB Stefan Janoski Max</h2>
+        <span class="main__form-subtitle">Unisex Skateboarding Shoe (Men's) </span>
+        <div class="main__rating rating">
+          <input type="radio" id="star-5" name="rating" value="5">
+          <label for="star-5" title="Оценка «5»"></label>	
+          <input type="radio" id="star-4" name="rating" value="4">
+          <label for="star-4" title="Оценка «4»"></label>    
+          <input checked type="radio" id="star-3" name="rating" value="3">
+          <label for="star-3" title="Оценка «3»"></label>  
+          <input type="radio" id="star-2" name="rating" value="2">
+          <label for="star-2" title="Оценка «2»"></label>    
+          <input type="radio" id="star-1" name="rating" value="1">
+          <label for="star-1" title="Оценка «1»"></label>
+        </div>
+        
+        <div class="main__form-wrapper">
+          <select class="main__form-select" name="" id="">
+            <option value="">Size 41</option>
+            <option value="">Size 42</option>
+            <option value="">Size 43</option>
+          </select>
+  
+          <select class="main__form-select" name="" id="">
+            <option value="">Qty 1</option>
+            <option value="">Qty 2</option>
+            <option value="">Qty 3</option>
+          </select>
+        </div>
+
+        <button type="button" class="main__form-btn btn">Add to cart</button>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>
